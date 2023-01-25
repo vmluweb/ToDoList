@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <meta name="author" content="vmluweb">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="toDoListApp.js" defer></script>
+</head>
+
+<body>
+    <div class="box">
+        <h1>To Do List</h1>
+
+        <!-- Ajouter une tâche -->
+        <section class="box__main">
+            <h2>Notez toutes vos tâches en toute sérénité</h2>
+            <form class="box__main--content">
+                <h3>Aujourd'hui, je dois:</h3>
+                <input id="boxInput" type="text" placeholder="Prendre un billet de train pour Bordeaux" name="contenu"
+                    id="contenu" autofocus />
+                <input id="ajouterTache" type="submit" value="Ajouter une tâche" />
+            </form>
+        </section>
+        <h3>Liste des tâches</h3>
+        <!-- Liste des tâches -->
+        <section class="boxListe">
+
+            <div class="liste">
+                <!-- <div class="listeItem valider">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+
+                    <div class="listeDetail">
+                        <input type="text" value="Faire les courses" readonly>
+                    </div>
+
+                    <div class="options">
+                        <button class="modifier enregistrer">Modifier</button>
+                        <button class="supprimer">Supprimer</button>
+                    </div>
+                </div>
+                <div class="listeItem">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+
+                    <div class="listeDetail">
+                        <input type="text" value="Organiser le déménagement " readonly>
+                    </div>
+
+                    <div class="options">
+                        <button class="modifier">Modifier</button>
+                        <button class="supprimer">Supprimer</button>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

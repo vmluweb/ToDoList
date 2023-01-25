@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --bodyColor: linear-gradient(
+    rgb(67, 27, 131),
+    rgb(112, 44, 133),
+    rgb(98, 42, 124)
+  );
+  --initialColor: rgb(216, 212, 212);
+  --gris: rgb(145, 143, 143);
+  --dark: rgb(36, 35, 35);
+  --inputBg: rgba(48, 36, 59, 0.712);
+  --deleteColor: rgb(172, 63, 63);
+
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: var(--bodyColor);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--initialColor);
+  background-attachment: fixed;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.box__main {
+  display: flex;
+  flex-direction: column;
+}
+
+.box__main--content {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 0.89rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#boxInput {
+  width: 20em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  font-size: 1.15rem;
+  background-color: var(--initialColor);
+  border-radius: 50px;
+  padding: 8px 10px;
+  box-shadow: var(--shadow);
+}
+
+#boxInput:focus {
+  color: var(--initialColor);
+  background-color: var(--inputBg);
+}
+
+#ajouterTache {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12em;
+  font-size: 1.15rem;
+  padding: 8px 10px;
+  color: var(--initialColor);
+  font-weight: 700;
+  background-color: var(--inputBg);
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+#ajouterTache:hover {
+  opacity: 0.7;
+}
+
+.boxListe {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.liste {
+  display: flex;
+  flex-direction: column;
+}
+
+.liste .listeItem {
+  display: flex;
+  align-items: center;
+  background-color: var(--initialColor);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  margin-bottom: 10px;
+}
+
+.liste {
+  display: flex;
+  flex-direction: column;
+}
+
+.listeItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.listeItem label {
+  display: block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.listeItem .listeDetail {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+.listeItem .listeDetail input {
+  color: var(--dark);
+  font-size: 15px;
+}
+
+.listeItem .options {
+  display: flex;
+  align-items: center;
+}
+
+.listeItem .options button {
+  display: block;
+  padding: 5px;
+  border-radius: 3px;
+  color: var(--initialColor);
+  cursor: pointer;
+}
+
+.listeItem .options button:hover {
+  opacity: 0.7;
+}
+
+.listeItem .options .modifier {
+  background-color: var(--inputBg);
+}
+
+.listeItem .options .supprimer {
+  background-color: var(--deleteColor);
+  margin-left: 5px;
+}
+
+.listeItem.valider .listeDetail input {
+  text-decoration: line-through;
+  color: var(--gris);
+}
+
+input[type="checkbox"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--gris);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0;
+  background-color: var(--inputBg);
+  box-shadow: var(--shadow);
+}
+
+input[type="checkbox"]:checked {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  background-color: var(--inputBg);
+}
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+  #boxInput {
+    width: 13em;
+    font-size: 1rem;
+  }
+  #ajouterTache {
+    width: 10em;
+    font-size: 1rem;
+  }
+}
